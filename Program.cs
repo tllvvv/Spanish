@@ -14,47 +14,6 @@ public class Program
 
         Console.WriteLine($"\nHumanizer: {ansNumber.ToWords(humanizerSex, new CultureInfo("es-ES_tradnl"))}");
         Console.WriteLine($"My Answer: {translator.TranslateNumber(ansNumber, ansSex)}");
-
-        /*char[] sexx = { 'f', 'm' };
-
-        foreach (char sex in sexx)
-        {
-            Translator translator = new Translator();
-            var humanizerSex = sex == 'm' ? GrammaticalGender.Masculine : GrammaticalGender.Feminine;
-            bool flag = false;
-            for (int i = 0; i <= 999999999; i++)
-            {
-                int number = i;
-                string a = number.ToWords(humanizerSex, new CultureInfo("es-ES_tradnl"));
-                string b = translator.TranslateNumber(number, sex);
-                if (a.Length != b.Length)
-                {
-                    Console.WriteLine($"{sex}, {number}");
-                    Console.WriteLine($"{a}");
-                    Console.WriteLine($"{b}");
-                    flag = true;
-                    break;
-                }
-
-                for (int j = 0; j < a.Length; j++)
-                {
-                    bool chechcur = a[j] == b[j] || Math.Abs((int)a[j] - (int)b[j]) == 132 || Math.Abs((int)a[j] - (int)b[j]) == 133;
-                    if (!chechcur)
-                    {
-                        Console.WriteLine($"{sex}, {number}");
-                        Console.WriteLine($"{a}.");
-                        Console.WriteLine($"{b}.");
-                        flag = true;
-                        break;
-                    }
-                }
-
-                if (flag)
-                {
-                    break;
-                }
-            }
-        }*/
     }
 
     private static int GetNumber()
